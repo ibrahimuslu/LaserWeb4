@@ -4,14 +4,13 @@
   "description": "LaserWeb",
   "main": "./src/index.js",
   "scripts": {
-    "start-server": "node node_modules/lw.comm-server/server.js",
     "start-app": "webpack-dev-server --progress --colors --open",
     "start-prod": "webpack-dev-server -p --progress --colors --open",
     "start": "npm-run-all -p -r start-app start-server",
     "bundle-dev": "webpack --progress --colors",
     "bundle-prod": "webpack -p --progress --colors",
     "build-docs": "jsdoc -c ./jsdoc.json",
-    "installdev": "git submodule init && git submodule update --remote && npm install && npm update lw.comm-server",
+    "installdev": "git submodule init && git submodule update --remote && npm install ",
     "golive": "git checkout gh-pages && git pull && git merge dev-es6 && npm run bundle-dev && git add dist && git commit -m regen && git push && git checkout dev-es6"
   },
   "repository": {
@@ -70,7 +69,6 @@
     "keyboardjs": "^2.5.1",
     "lw.canvas-filters": "git+https://github.com/LaserWeb/lw.canvas-filters.git",
     "lw.canvas-grid": "git+https://github.com/LaserWeb/lw.canvas-grid.git",
-    "lw.comm-server": "git+https://github.com/LaserWeb/lw.comm-server.git",
     "lw.raster-to-gcode": "git+https://github.com/LaserWeb/lw.raster-to-gcode.git",
     "lw.svg-curves": "^0.1.0",
     "lw.svg-path": "^0.1.0",
@@ -116,6 +114,7 @@
     "dxf-parser": "^0.4.8",
     "hoek": "^5.0.3",
     "immutability-helper": "^2.9.1",
+    "json-stringify-safe": "^5.0.1",
     "object.omit": "^3.0.0",
     "unicode": "^9.0.0",
     "vectorize-text": "^3.2.1"
